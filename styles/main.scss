@@ -1,0 +1,55 @@
+@import 'bourbon/bourbon';
+$visual-grid: true;
+@import 'neat/neat';
+
+*,
+ *::before,
+
+ *::after {
+  box-sizing: border-box;
+};
+
+$width: 1300px;
+
+
+
+.maincontainer {
+  @include outer-container;
+}
+
+.headermain {
+  @include span-columns(12);
+  @include omega(3n);
+  background: linear-gradient(rgba(17,100,400,0.75),
+  rgba(17,117,192,0.75));
+  height:100px;
+  
+};
+
+
+.leftside {
+  @include span-columns(8);
+
+  background-color: green;
+  height: 300px;
+};
+
+.rightside {
+  @include span-columns(4);
+  @include omega();
+  background-color: orange;
+  height: 300px;
+
+};
+
+.maincontainertwo {
+  @include outer-container;
+};
+
+.detailitem {
+  @include span-columns(8);
+  background-color: grey;
+  color: #fff;
+  height: 300px;
+
+};
